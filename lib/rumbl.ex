@@ -9,7 +9,10 @@ defmodule Rumbl do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Rumbl.Repo, []),
+
+      # Commenting this out while we are not using Ecto
+      # supervisor(Rumbl.Repo, []),
+
       # Start the endpoint when the application starts
       supervisor(Rumbl.Endpoint, []),
       # Start your own worker by calling: Rumbl.Worker.start_link(arg1, arg2, arg3)
